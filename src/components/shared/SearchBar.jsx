@@ -1,10 +1,10 @@
 import { Search } from "lucide-react";
 
-const SearchBar=({onsSearch,isLoading})=>{
+const SearchBar=({onSearch,isLoading})=>{
     const handleSubmit=(e)=>{
         e.preventDefault();
         const username=e.target.username.value
-        if(username) onsSearch(username)
+        if(username) onSearch(username)
     };
 
     return(
@@ -18,7 +18,7 @@ const SearchBar=({onsSearch,isLoading})=>{
             />
             <button type="submit"
             className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-400 transition-colors">
-                {isLoading? <div className="animate-spin h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-ful"></div>: <Search size={20}/>}
+                {isLoading? <div className="animate-spin h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full"></div>: <Search size={20}/>}
             </button>
 
         </form>
