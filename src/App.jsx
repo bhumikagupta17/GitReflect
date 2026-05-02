@@ -4,19 +4,27 @@ import './App.css'
 import SearchBar from './components/shared/SearchBar'
 import ProfileHeader from './components/dashboard/ProfileHeader'
 import RepoCard from './components/dashboard/RepoCard'
+import ThemeToggle from './components/shared/ThemeToggle'
 
 function App() {
   const {data,loading,error,fetchUser}=useGitHub()
 
-  return (
-    <div className='max-w-6xl mx-auto p-6'>
-      <header className='text-center my-12'>
-        <h1 className='text-5xl font-extrabold neon-text mb-4'>GitReflect</h1>
-        <p className="text-slate-400">Visualize your digital footprint.</p>
-      </header>
+return (
+  <div className="min-h-screen transition-colors duration-300 dark:bg-slate-950 bg-slate-50 text-slate-900 dark:text-white">
+    <div className="max-w-6xl mx-auto p-6">
+      {/* Top Navigation Row */}
+      <nav className="flex justify-between items-center mb-12">
+        <div className="text-left">
+           <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">
+            GitReflect
+           </h1>
+           <p className="text-slate-500 dark:text-slate-400 text-sm">Visualize your digital footprint.</p>
+        </div>
+        <ThemeToggle />
+      </nav>
 
-      <SearchBar onSearch={fetchUser} isLoading={loading}/>
-      
+      <SearchBar onSearch={fetchUser} isLoading={loading} />
+
       {error && <p className='text-red-400 mt-4 text-center'>{error}</p>}
       {data && (
         <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -40,7 +48,8 @@ function App() {
         </div>
       )}
     </div>
-  )
+  </div>
+);
 }
 
 export default App
