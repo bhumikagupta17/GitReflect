@@ -4,26 +4,29 @@
 
 @layer base {
   body {
-    @apply transition-colors duration-300;
-  }
-  
-  .dark body {
-    @apply bg-slate-950 text-white;
+    @apply text-gray-800;
+    background: linear-gradient(to bottom right, #9fb0e5, #adbfd0);
   }
 
-  body {
-    @apply bg-slate-50 text-slate-900;
+  .dark body {
+    background: linear-gradient(to bottom right, #020617, #0f172a);
   }
+
 }
 
+@layer components {
 .glass-card {
-  @apply backdrop-blur-md rounded-2xl border transition-all;
+  @apply rounded-2xl border border-blue-100 
+         bg-white/70 backdrop-blur-sm
+         shadow-md transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply shadow-xl -translate-y-1;
 }
 
 .dark .glass-card {
-  @apply bg-slate-900/50 border-slate-800 shadow-xl;
+  @apply bg-slate-900/70 border-white/10 
+         shadow-[0_10px_40px_rgba(59,130,246,0.15)];
 }
-
-.glass-card {
-  @apply bg-white/70 border-slate-200 shadow-md;
 }
