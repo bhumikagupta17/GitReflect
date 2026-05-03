@@ -19,13 +19,14 @@ const LanguageChart = ({repos}) => {
     <div className="glass-card p-6">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Language Distribution</h3>
 
-        <div className="w-full h-64">
+        <div className="w-full h-60">
             <ResponsiveContainer>
                 <PieChart>
                     <Pie data={data}
                     dataKey="value"
                     outerRadius={80}
-                    label>
+                    label={({ name, percent }) =>`${name} ${(percent * 100).toFixed(0)}%`
+  }>
                         {data.map((_,index)=>(
                             <Cell key={index} fill={colors[index&colors.length]}/>
                         ))}

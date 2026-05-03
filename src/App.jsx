@@ -6,6 +6,7 @@ import ProfileHeader from './components/dashboard/ProfileHeader'
 import RepoCard from './components/dashboard/RepoCard'
 import ThemeToggle from './components/shared/ThemeToggle'
 import LanguageChart from './components/dashboard/LanguageChart'
+import ActivityLineChart from './components/dashboard/ActivityLineChart'
 
 function App() {
   const { data, loading, error, fetchUser } = useGitHub();
@@ -37,7 +38,19 @@ function App() {
               <ProfileHeader user={data.user} />
             </div>
 
-            <LanguageChart repos={data.repos}/>
+            {data?.repos && data.repos.length > 0 && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                <div className="glass-card p-6 h-[380px]">
+                  <LanguageChart repos={data.repos} />
+                </div>
+
+                <div className="glass-card p-6 h-[380px]">
+                  <ActivityLineChart repos={data.repos} />
+                </div>
+
+              </div>
+            )}
 
             {/* 2. Repositories Section */}
             <div className="glass-card p-8">
