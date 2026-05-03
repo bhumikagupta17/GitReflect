@@ -6,10 +6,7 @@
 
 ## ✨ Features
 
-*   **📊 Dual-View Analytics**: A custom toggle allows users to switch between:
-
-    *   **Active Days**: A line chart visualizing unique days of development activity per month.
-    *   **Commit Volume**: A bar chart showing the total frequency of repository updates.
+*   **📊 Activity Analytics**: A line chart visualizing repository update frequency over time.
       
 *   **🎨 Premium Glassmorphism UI**: A modern "frosted glass" aesthetic with full **Light/Dark mode** support.
   
@@ -17,7 +14,6 @@
   
 *   **📂 Project Showcase**: Dynamic rendering of the latest public repositories with descriptions and language tags.
   
-*   **📱 Optimized for macOS**: Specifically refined for a seamless experience on high-resolution displays like the MacBook Air.
 
 ## 🛠️ Tech Stack
 
@@ -57,7 +53,7 @@
 This project demonstrates several advanced frontend concepts:
 
 *   **State Management**: Utilizing React `useState` to drive theme toggling and chart views.
-*   **Data Aggregation**: Custom logic using JavaScript `Set` to filter unique "Active Days" from GitHub's timestamps.
+*   **Theme Integration**: Supporting system-wide light and dark preferences.
 *   **Responsive Design**: Mobile-first approach using Tailwind's grid and flexbox systems.
 
 ## 📄 License
@@ -66,5 +62,5 @@ This project is open-source and available under the MIT License.
 
 ---
 
-**Developed by Bhumika Gupta**
+**Developed with ❤️ by Bhumika Gupta**
 *   B.Tech IT '28 @ NIT Jalandhar
