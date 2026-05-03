@@ -28,7 +28,7 @@ const ActivityLineChart = ({repos}) => {
     <div className=" p-3 w-full glass-card">
         <div className="flex items-center justify-between mb-2">
         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-            Activity Over Time
+            Repository Activity Over Time
         </h3>
         <button
         onClick={()=>setShowInfo(!showInfo)}
@@ -39,8 +39,7 @@ const ActivityLineChart = ({repos}) => {
     </div>
         {showInfo && (
             <div className="mb-4 p-3 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-sm text-gray-700 dark:text-slate-300">
-                Each point represents the number of repositories updated in a given month.
-                Higher values indicate more activity during that time period.
+                Each point shows how many repositories were actively worked on in that month, based on their last update.
             </div>
         )}
 
@@ -49,8 +48,11 @@ const ActivityLineChart = ({repos}) => {
                 <LineChart data={data}>
                     <XAxis dataKey="month"/>
                         <YAxis/>
-                        <Tooltip/>
-                        <Line type="monotone" dataKey="activity" strokeWidth={2}/>
+                        <Tooltip formatter={(value)=>[`${value} repos`,"Active Repos"]}/>
+                        <Line type="monotone" dataKey="activity" 
+                        stroke="#3b82f6" strokeWidth={3}
+                        dot={{r:4}}
+                        activeDot={{r:6}}/>
                 </LineChart>
             </ResponsiveContainer>
         </div>
