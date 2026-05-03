@@ -5,6 +5,7 @@ import SearchBar from './components/shared/SearchBar'
 import ProfileHeader from './components/dashboard/ProfileHeader'
 import RepoCard from './components/dashboard/RepoCard'
 import ThemeToggle from './components/shared/ThemeToggle'
+import LanguageChart from './components/dashboard/LanguageChart'
 
 function App() {
   const { data, loading, error, fetchUser } = useGitHub();
@@ -35,6 +36,8 @@ function App() {
             <div className="w-full">
               <ProfileHeader user={data.user} />
             </div>
+
+            <LanguageChart repos={data.repos}/>
 
             {/* 2. Repositories Section */}
             <div className="glass-card p-8">
