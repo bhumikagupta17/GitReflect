@@ -1,16 +1,70 @@
-# React + Vite
+# 🚀 GitReflect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [https://git-reflect.vercel.app/](https://git-reflect.vercel.app/)
 
-Currently, two official plugins are available:
+**GitReflect** is a high-performance, responsive web application that provides a visual "reflection" of your GitHub journey. Designed with a focus on clean UI/UX and data-driven insights, it transforms raw repository metadata into an interactive analytics dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+*   **📊 Dual-View Analytics**: A custom toggle allows users to switch between:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    *   **Active Days**: A line chart visualizing unique days of development activity per month.
+    *   **Commit Volume**: A bar chart showing the total frequency of repository updates.
+      
+*   **🎨 Premium Glassmorphism UI**: A modern "frosted glass" aesthetic with full **Light/Dark mode** support.
+  
+*   **🧩 Language Analytics**: Automatically calculates and displays your technology stack distribution (e.g., HTML, JS, C++, Dart).
+  
+*   **📂 Project Showcase**: Dynamic rendering of the latest public repositories with descriptions and language tags.
+  
+*   **📱 Optimized for macOS**: Specifically refined for a seamless experience on high-resolution displays like the MacBook Air.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Core**: React.js & Vite
+*   **Styling**: Tailwind CSS (with custom glassmorphism components)
+*   **Charts**: Recharts
+*   **Icons**: Lucide React
+*   **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+*   Node.js (v18+)
+*   npm or yarn
+
+### Installation & Setup
+
+1. **Clone the repo**
+   ```
+   git clone [https://github.com/bhumikagupta17/GitReflect.git](https://github.com/bhumikagupta17/GitReflect.git)
+   cd GitReflect
+   ```
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+3. **Start the development server**
+   ```
+   npm run dev
+   ```
+4. **Build for production**
+   ```
+   npm run build
+   ```
+## 📈 Technical Implementation Notes
+
+This project demonstrates several advanced frontend concepts:
+
+*   **State Management**: Utilizing React `useState` to drive theme toggling and chart views.
+*   **Data Aggregation**: Custom logic using JavaScript `Set` to filter unique "Active Days" from GitHub's timestamps.
+*   **Responsive Design**: Mobile-first approach using Tailwind's grid and flexbox systems.
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+**Developed by Bhumika Gupta**
+*   B.Tech IT '28 @ NIT Jalandhar
