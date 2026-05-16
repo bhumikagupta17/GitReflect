@@ -7,6 +7,7 @@ import RepoCard from './components/dashboard/RepoCard'
 import ThemeToggle from './components/shared/ThemeToggle'
 import LanguageChart from './components/dashboard/LanguageChart'
 import ActivityLineChart from './components/dashboard/ActivityLineChart'
+import ProfileInsights from './components/dashboard/ProfileInsights'
 
 function App() {
   const { data, loading, error, fetchUser } = useGitHub();
@@ -52,7 +53,13 @@ function App() {
               </div>
             )}
 
-            {/* 2. Repositories Section */}
+            {/* 2. AI insights */}
+            {data.repos && (
+              <ProfileInsights key={data.user.login}
+              languages={data.repos} activityData={data.repos}/>
+            )}
+
+            {/* 3. Repositories Section */}
             <div className="glass-card p-8">
               <div className="flex justify-between items-center mb-6">
 
