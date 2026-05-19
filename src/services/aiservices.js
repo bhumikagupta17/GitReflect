@@ -1,5 +1,5 @@
 export const generateInsights = async (languages, activityData) => {
-    const response = await fetch("http://localhost:5000/api/insights", {
+    const response = await fetch("http://localhost:3000/api/insights", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

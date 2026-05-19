@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Sparkles, Loader2, AlertCircle } from "lucide-react";
-
+import ReactMarkdown from 'react-markdown';
 import DashboardCard from "../shared/DashboardCard";
 import { generateInsights } from "../../services/aiservices";
 
@@ -73,8 +73,9 @@ const ProfileInsights = ({ languages, activityData }) => {
             )}
 
             {!loading && insights && (
-                <div className="text-sm text-gray-700 dark:text-slate-300 space-y-2 whitespace-pre-line bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-800">
-                    {insights}
+                <div className="text-sm text-gray-700 dark:text-slate-300  bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+                    <ReactMarkdown>{insights}
+                        </ReactMarkdown>
                 </div>
             )}
 
