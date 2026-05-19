@@ -1,66 +1,87 @@
-# 🚀 GitReflect
+# 🪞 GitReflect
 
-**Live Demo:** [https://git-reflect.vercel.app/](https://git-reflect.vercel.app/)
+**Live Demo:** [git-reflect.vercel.app](https://git-reflect.vercel.app/)
 
-**GitReflect** is a high-performance, responsive web application that provides a visual "reflection" of your GitHub journey. Designed with a focus on clean UI/UX and data-driven insights, it transforms raw repository metadata into an interactive analytics dashboard.
+GitReflect transforms your GitHub profile into a beautiful, AI-powered analytics dashboard. Paste your username and get instant insights into your coding activity, tech stack, and personalized career advice — all wrapped in a stunning glassmorphism UI.
+
+---
 
 ## ✨ Features
 
-*   **📊 Activity Analytics**: A line chart visualizing repository update frequency over time.
-      
-*   **🎨 Premium Glassmorphism UI**: A modern "frosted glass" aesthetic with full **Light/Dark mode** support.
-  
-*   **🧩 Language Analytics**: Automatically calculates and displays your technology stack distribution (e.g., HTML, JS, C++, Dart).
-  
-*   **📂 Project Showcase**: Dynamic rendering of the latest public repositories with descriptions and language tags.
-  
+- **🤖 AI-Powered Insights** — Gemini AI analyzes your GitHub data and delivers personalized career coaching and profile improvement tips
+- **📊 Activity Analytics** — Line chart visualizing your repository activity over time
+- **🎨 Glassmorphism UI** — Modern frosted glass aesthetic with full Light/Dark mode support
+- **🧩 Language Breakdown** — Automatically calculates your tech stack distribution across all public repos
+- **📂 Project Showcase** — Dynamic rendering of your latest repositories with descriptions and language tags
+
+---
 
 ## 🛠️ Tech Stack
 
-*   **Core**: React.js & Vite
-*   **Styling**: Tailwind CSS (with custom glassmorphism components)
-*   **Charts**: Recharts
-*   **Icons**: Lucide React
-*   **Deployment**: Vercel
+| Layer | Technology |
+|---|---|
+| Frontend | React.js + Vite |
+| Styling | Tailwind CSS |
+| Charts | Recharts |
+| AI | Google Gemini API |
+| Backend | Node.js + Express |
+| Deployment | Vercel |
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-*   Node.js (v18+)
-*   npm or yarn
+- Node.js (v18+)
+- npm
+- Gemini API Key → [Get one here](https://aistudio.google.com/)
 
-### Installation & Setup
+### Installation
 
 1. **Clone the repo**
-   ```
-   git clone [https://github.com/bhumikagupta17/GitReflect.git](https://github.com/bhumikagupta17/GitReflect.git)
+```bash
+   git clone https://github.com/bhumikagupta17/GitReflect.git
    cd GitReflect
-   ```
-2. **Install dependencies**
-   ```
+```
+
+2. **Install frontend dependencies**
+```bash
    npm install
-   ```
-3. **Start the development server**
-   ```
+```
+
+3. **Install backend dependencies**
+```bash
+   cd server
+   npm install
+```
+
+4. **Set up environment variables**
+```bash
+   # inside /server
+   cp .env.example .env
+   # Add your Gemini API key to .env
+   GEMINI_API_KEY=your_key_here
+```
+
+5. **Run the backend**
+```bash
+   cd server
+   node server.js
+```
+
+6. **Run the frontend**
+```bash
+   # in root folder
    npm run dev
-   ```
-4. **Build for production**
-   ```
-   npm run build
-   ```
-## 📈 Technical Implementation Notes
+```
 
-This project demonstrates several advanced frontend concepts:
-
-*   **State Management**: Utilizing React `useState` to drive theme toggling and chart views.
-*   **Theme Integration**: Supporting system-wide light and dark preferences.
-*   **Responsive Design**: Mobile-first approach using Tailwind's grid and flexbox systems.
+---
 
 ## 📄 License
 
-This project is open-source and available under the MIT License.
+MIT License — open source and free to use.
 
 ---
 
 **Developed with ❤️ by Bhumika Gupta**
-*   B.Tech IT '28 @ NIT Jalandhar
+B.Tech IT '28 @ NIT Jalandhar
