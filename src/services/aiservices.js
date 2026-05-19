@@ -1,5 +1,5 @@
 export const generateInsights = async (languages, activityData) => {
-    const response = await fetch("https://gitreflect-server.vercel.app", {
+    const response = await fetch("https://gitreflect-server.vercel.app/api/insights", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
