@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
 
-console.log("API KEY loaded:", process.env.GEMINI_API_KEY ? "YES" : "NO ❌"); // ← add this
+console.log("API KEY loaded:", process.env.GEMINI_API_KEY ? "YES" : "NO "); 
 
 const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY,
@@ -11,7 +11,7 @@ const ai = new GoogleGenAI({
 
 export const getInsightsFromGemini = async (languages, activityData) => {
     try {
-        console.log("Calling Gemini..."); // ← add this
+        console.log("Calling Gemini..."); 
 
         const prompt = `
         You are an expert technical recruiter and career coach reviewing a software engineering student's GitHub profile.
@@ -33,16 +33,16 @@ export const getInsightsFromGemini = async (languages, activityData) => {
         `
 
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash", // ← safer model
+            model: "gemini-2.5-flash",
             contents: prompt,
         });
 
-        console.log("Gemini responded!"); // ← add this
+        console.log("Gemini responded!"); 
 
         return response.text;
 
     } catch (err) {
-        console.error("GEMINI ERROR:", err.message); // ← add this
+        console.error("GEMINI ERROR:", err.message); 
         throw err;
     }
 };

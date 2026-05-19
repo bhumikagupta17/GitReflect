@@ -1,7 +1,7 @@
 import { getInsightsFromGemini } from "../services/geminiService.js";
 
 export const generateInsights = async (req, res) => {
-    console.log("✅ Route hit!");
+    console.log("Route hit!");
     try {
         const { languages, activityData } = req.body;
 
